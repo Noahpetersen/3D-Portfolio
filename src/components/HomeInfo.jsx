@@ -26,7 +26,7 @@ const renderContent = {
         <InfoBox 
         text={`Passionate about web development, 
             I am currently immersed in my studies, acquiring a diverse set 
-            of skills that enhance my ability to create immersive and ${<br/>} effective digital solutions.`}
+            of skills that enhance my ability to create immersive and effective digital solutions.`}
         btnText='Learn more'
         link='/about'
         />
@@ -42,7 +42,7 @@ const renderContent = {
         <InfoBox 
         text={`Passionate about web development, 
             I am currently immersed in my studies, acquiring a diverse set 
-            of skills that enhance my ability to create immersive and ${<br/>} effective digital solutions.`}
+            of skills that enhance my ability to create immersive and effective digital solutions.`}
         btnText='Learn more'
         link='/contact'
         />
