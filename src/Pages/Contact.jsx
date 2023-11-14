@@ -1,10 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { Canvas, useFrame } from '@react-three/fiber'
+import Fox from '../models/Fox.jsx'
+import { Loader } from '@react-three/drei'
 
 const Contact = () => {
     const formRef = useRef(null)
     const [form, setForm] = useState({ name: '', email: '', message: ''})
     const [isLoading, setIsLoading] = useState(false)
+    const [currenAnimation, setCurrenAnimation] = useState('idle')
 
     const handleChange = (e) => {
       setForm({ ...form, [e.target.name]: e.target.value })
@@ -13,6 +17,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
       e.preventDefault()
       setIsLoading(true)
+      setCurrenAnimation('hit')
 
       emailjs.send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -27,9 +32,11 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       ).then(() => {
         setIsLoading(false)
+        setTimeout(() => {
         setForm({ name: '', email: '', message: ''})
-        // TODO: Add success message
-        //TODO: Hide Alert
+          setCurrenAnimation('idle')
+        }, 3000)
+        
       }).catch((err) => {
         setIsLoading(false)
         console.log(err)
@@ -38,13 +45,9 @@ const Contact = () => {
     }
 
 
-    const handleFocus = () =>  {
+    const handleFocus = () =>  setCurrenAnimation('walk')
 
-    }
-
-    const handleBlur = () => {
-
-    }
+    const handleBlur = () => setCurrenAnimation('idle')
 
     
   return (
@@ -113,6 +116,32 @@ const Contact = () => {
           </button>
         </form>
 
+        <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+          <Canvas
+            camera={{
+              position: [0, 0, 5],
+              fov: 75,
+              near: 0.1,
+              far: 1000
+            }}
+          >
+            <directionalLight
+              intensity={2.5}
+              position={[ 0, 0, 1 ]}
+            />
+            <ambientLight 
+              intensity={0.5} 
+            />
+            <Suspense fallback={null}>
+              <Fox
+                position={[ 0.5, 0.35, 0 ]}
+                rotation={[ 12.6, -0.6, 0 ]}
+                scale={[ 0.5, 0.5, 0.5 ]}
+                currenAnimation={currenAnimation}
+              />
+            </Suspense>
+          </Canvas>
+        </div>
 
       </div>
     </section>
