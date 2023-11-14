@@ -6,7 +6,7 @@ import Sky from '../models/Sky'
 import Bird from '../models/Bird'
 import Plane from '../models/Plane'
 
-const Experience = () => {
+const Experience = ({currentStage, setCurrentStage}) => {
     const [isRotating, setIsRotating] = useState(false)
 
     const adjustIslandForScreenSize = () => {
@@ -65,6 +65,7 @@ const Experience = () => {
                 rotation={islandRotation}
                 isRotating={isRotating}
                 setIsRotating={setIsRotating}
+                setCurrentStage={setCurrentStage}
             />
             <Plane 
                 position={planePosition}
@@ -76,7 +77,9 @@ const Experience = () => {
                 position={[-5, 2, -1]}
                 scale={[0.003, 0.003, 0.003]}
             />
-            <Sky/>
+            <Sky 
+                isRotating={isRotating}
+            />
         </Suspense>
     </Canvas>
   )
