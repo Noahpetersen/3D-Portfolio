@@ -10,7 +10,7 @@ import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import scene from "../assets/3d/fox.glb";
 
-const Fox = ({ currenAnimation, ...props }) => {
+const Fox = ({ currentAnimation, ...props }) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(scene);
   const { actions } = useAnimations(animations, group);
@@ -18,10 +18,10 @@ const Fox = ({ currenAnimation, ...props }) => {
     useEffect(() => {
         Object.values(actions).forEach((action) => { action.stop() })
 
-        if(actions[currenAnimation]) {
-            actions[currenAnimation].play();
+        if(actions[currentAnimation]) {
+            actions[currentAnimation].play();
         }
-    }, [ actions, currenAnimation ]);
+    }, [ actions, currentAnimation ]);
 
   return (
     <group ref={group} {...props} dispose={null}>
