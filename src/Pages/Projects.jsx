@@ -11,7 +11,7 @@ const Projects = () => {
         My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>Web Developer based in Aarhus, specializing in 3D development and building immmersive experiences</p>
+        <p>Projects that have significantly contributed to my development as a web developer.</p>
       </div>
 
       <div className='flex flex-wrap my-20 gap-16'>
@@ -36,8 +36,8 @@ const Projects = () => {
                 {project.description}
               </p>
               <div className='mt-5 flex items-center gap-2 font-poppins'>
-                <Link to={project.link} targtet='blank' rel='noopener noreferrer' className='text-blue-500 font-semibold'>
-                  Live Link
+                <Link to={project.link} target='blank' rel='noopener noreferrer' className='text-blue-500 font-semibold'>
+                  {project.name === 'Full Stack Chatbot' ? 'View Codebase' : 'Live Link'}
                 </Link>
                 <img 
                   src={arrow}

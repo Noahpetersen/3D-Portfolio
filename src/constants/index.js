@@ -1,22 +1,20 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { eaaa, easv, ubix, threejs, mysql, php, glsl } from "../assets/images";
 import {
-    car,
+    plane,
     contact,
     css,
-    estate,
     git,
     github,
     html,
     javascript,
-    linkedin,
-    pricewise,
     react,
     sass,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
-    typescript
+    typescript,
+    chat,
+    game,
+    watch
+
 } from "../assets/icons";
 
 export const skills = [
@@ -51,13 +49,13 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: react,
+        imageUrl: threejs,
         name: "Three.js",
         type: "Frontend",
     },
     {
-        imageUrl: react,
-        name: "React",
+        imageUrl: glsl,
+        name: "OpenGL Shading Language",
         type: "Frontend",
     },
     {
@@ -76,12 +74,12 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: typescript,
+        imageUrl: mysql,
         name: "MySQL",
         type: "Backend",
     },
     {
-        imageUrl: typescript,
+        imageUrl: php,
         name: "PHP",
         type: "Backend",
     }
@@ -91,40 +89,43 @@ export const experiences = [
     {
         title: "Multimedia Designer",
         company_name: "Erhvervsakademi Sydvest",
-        icon: starbucks,
+        icon: easv,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "Aug 2021 - Jun 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Acquired a deep understanding of design and UX principles through a comprehensive study program.",
+            "Developed proficiency in HTML, CSS, and JavaScript, laying the foundation for web development skills.",
+            "Gained hands-on experience with React.js, enhancing the ability to build dynamic and interactive user interfaces.",
+            "Applied acquired skills to contribute to advertising campaigns, ensuring the creation of captivating user experiences."
         ],
     },
     {
         title: "Frontend Developer",
         company_name: "Ubix GmbH",
-        icon: tesla,
+        icon: ubix,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "Feb 2023 - Aug 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Conducted user research to inform and enhance the design process, ensuring user-centric solutions.",
+            "Contributed to the development of frontend solutions, leveraging Angular and TypeScript to create interactive and responsive web applications.",
+            "Applied Scrum methodologies, gaining valuable real-world experience in agile project management.",
+            "Participated in collaborative workflows, working closely with cross-functional teams to achieve project goals.",
+            "Enhanced problem-solving abilities through hands-on experience in resolving frontend development challenges.",
         ],
     },
     {
         title: "Web Developer",
         company_name: "Erhvervsakademi Aarhus",
-        icon: shopify,
+        icon: eaaa,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "Aug 2023 - Jan 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Currently studying how to create full stack web applications.",
+            "Learning React.js for building dynamic and interactive user interfaces.",
+            "Acquiring skills in MySQL for database management.",
+            "Exploring PHP for backend development to handle server-side logic.",
+            "Engaging in group projects to apply knowledge and collaborate effectively.",
+            "Gaining proficiency in using Git for version control in larger coding projects."
         ],
     },
 ];
@@ -138,56 +139,37 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
-    },
-    {
-        name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://github.com/Noahpetersen',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: watch,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: '3D Watch Configurator',
+        description: 'Developed a web application that allows users to customize and visualize a 3D watch model in real-time.',
+        link: 'https://watch-configurator-kappa.vercel.app',
     },
     {
-        iconUrl: threads,
+        iconUrl: chat,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Full Stack Chatbot',
+        description: 'Created a full-stack chatbot with authentication, running with php and mysql, allowing users to communicate with a bot in a chatroom.',
+        link: 'https://github.com/Noahpetersen/chatbot-with-database',
     },
     {
-        iconUrl: car,
+        iconUrl: plane,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
+        name: 'Plane Scrollytelling Experience',
         description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        link: 'https://plane-scrollytelling.vercel.app',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: game,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: '3D Webbased Game',
+        description: 'Built a little webbased game utilizing three.js and react-three-fiber. The game aimed to thoroughly internalize all the techniques and principles I had acquired.',
+        link: 'https://3d-game-five.vercel.app',
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
 ];
